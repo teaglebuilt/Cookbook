@@ -1,4 +1,4 @@
-from utils.iso6346 import create
+from cookbook.classes.utils import iso6346
 
 
 class ShippingContainer:
@@ -7,7 +7,7 @@ class ShippingContainer:
 
     @staticmethod
     def _make_bic_code(owner_code, serial):
-        return create(owner_code=owner_code, serial=str(serial).zfill(6))
+        return iso6346.create(owner_code=owner_code, serial=str(serial).zfill(6))
 
     @classmethod
     def _get_next_serial(cls):
@@ -27,7 +27,20 @@ class ShippingContainer:
         """instance attribute"""
         self.owner_code = owner_code
         self.contents = contents
-        self.bic = ShippingContainer._make_bic_code(
+        self.bic = self._make_bic_code(
             owner_code=owner_code,
             serial=ShippingContainer._get_next_serial()
         )
+
+
+class RefrigeratedShippingContainer(ShippingContainer):
+
+    @staticmethod
+    def _make_bic_code(owner_code, serial):
+        return iso6346.create(
+            owner_code=owner_code,
+            serial=str(serial.zfill(6)),
+            category='R'
+        )
+
+# ShippingContainer.create_empty("YML")
