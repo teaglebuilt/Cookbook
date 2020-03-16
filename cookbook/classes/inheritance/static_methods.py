@@ -42,5 +42,3 @@ class RefrigeratedShippingContainer(ShippingContainer):
             serial=str(serial.zfill(6)),
             category='R'
         )
-
-# ShippingContainer.create_empty("YML")

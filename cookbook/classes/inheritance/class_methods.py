@@ -52,8 +52,17 @@ class RefrigeratedShippingContainer(ShippingContainer):
         self.celsius = celsius
 
 
-# RefrigeratedShippingContainer.create_with_items('ESC', [
-#     'brocolli',
-#     'cauliflower',
-#     'carrots'
-# ], celsius=2.0)
+__test__ = {
+    'RefrigeratedShippingContainer': '''
+        >>> r = RefrigeratedShippingContainer.create_with_items('ESC', ['brocolli', 'cauliflower', 'carrots'],  celsius=2.0)
+        >>> r.__class__.__base__.__name__
+        'ShippingContainer'
+        >>> r._make_bic_code("YML", 1234)
+        'YMLR0012340'
+    '''
+}
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)
