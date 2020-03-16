@@ -15,3 +15,18 @@ class ShippingContainer:
         self.owner_code = owner_code
         self.contents = contents
         self.serial = ShippingContainer._get_next_serial()
+
+
+__test__ = {
+    'ShippingContainer': '''
+        >>> ShippingContainer(5, 'car')._get_next_serial()
+        1338
+        >>> ShippingContainer(56, 'car').serial
+        1339
+    '''
+}
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)

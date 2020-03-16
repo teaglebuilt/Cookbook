@@ -33,4 +33,17 @@ class ShippingContainer:
         )
 
 
-ShippingContainer.create_empty("YML")
+__test__ = {
+    'ShippingContainer': '''
+        >>> s = ShippingContainer.create_empty("YML")
+        >>> s._get_next_serial()
+        1338
+        >>> s.bic
+        'YMLU0013374'
+    '''
+}
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)
