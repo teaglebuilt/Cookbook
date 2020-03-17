@@ -1,5 +1,7 @@
 """
-ISO 6346 shipping container codes.
+    iso6346.py
+    ----------
+    ISO 6346 shipping container codes.
 """
 
 

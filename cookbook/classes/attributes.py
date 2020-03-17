@@ -1,4 +1,12 @@
 
+"""
+   attributes.py
+   -------------
+   This file is to show what an attribute is in a class and the difference between
+   class attributes and instance attributes within a class.
+"""
+# pylint: disable=too-few-public-methods
+
 
 class ShippingContainer:
     """class attribute"""
@@ -36,6 +44,7 @@ __test__ = {
         1338
     '''
 }
+
 
 if __name__ == "__main__":
     import doctest

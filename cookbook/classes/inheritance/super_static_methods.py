@@ -1,4 +1,11 @@
+"""
+    super_class_methods.py
+    ----------------------------
+    Showing inheriting and overriding static methods.
+"""
 from cookbook.classes.utils import iso6346
+
+# pylint: disable=missing-function-docstring
 
 
 class ShippingContainer:
@@ -33,12 +40,26 @@ class ShippingContainer:
         )
 
 
-class RefrigeratedShippingContainer(ShippingContainer):
+class RefrigeratedShippingContainerTwo(ShippingContainer):
+    """subclass of ShippingContainer"""
 
     @staticmethod
     def _make_bic_code(owner_code, serial):
         return iso6346.create(
             owner_code=owner_code,
-            serial=str(serial.zfill(6)),
+            serial=str(serial).zfill(6),
             category='R'
         )
+
+
+__test__ = {
+    'RefrigeratedShippingContainerTwo': '''   
+        >>> r = RefrigeratedShippingContainerTwo.create_with_items('ESC', ['brocolli', 'cauliflower', 'carrots'])
+        >>> r._make_bic_code("YML", 1234)
+        'YMLR0012340'
+    '''
+}
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)

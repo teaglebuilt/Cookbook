@@ -1,3 +1,10 @@
+"""
+    class_methods.py
+    ----------------
+    Showing class methods having access to global class attributes and without
+    access to instance attributes with self.
+"""
+
 from cookbook.classes.utils import iso6346
 
 

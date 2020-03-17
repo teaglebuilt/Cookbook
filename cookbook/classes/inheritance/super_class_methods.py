@@ -1,3 +1,9 @@
+"""
+    super_class_methods.py
+    ----------------------------  
+    Showing inheriting and overriding class methods and attributes from parent class.
+"""
+
 from cookbook.classes.utils import iso6346
 
 
@@ -17,10 +23,12 @@ class ShippingContainer:
 
     @classmethod
     def create_empty(cls, owner_code, *args, **kwargs):
+        """class method with extra parameters"""
         return cls(owner_code, contents=None, *args, **kwargs)
 
     @classmethod
     def create_with_items(cls, owner_code, items, *args, **kwargs):
+        """class method with extra parameters"""
         return cls(owner_code, contents=list(items), *args, **kwargs)
 
     def __init__(self, owner_code, contents):
@@ -34,6 +42,7 @@ class ShippingContainer:
 
 
 class RefrigeratedShippingContainer(ShippingContainer):
+    """SubClass of ShippingContainer"""
 
     MAX_CELSIUS = 4.0
 

@@ -1,3 +1,10 @@
+"""
+    static_methods.py
+    ----------------
+    Showing the purpose of static methods and the inabilty to access class state.
+"""
+
+# pylint: disable=too-few-public-methods
 
 
 class ShippingContainer:
