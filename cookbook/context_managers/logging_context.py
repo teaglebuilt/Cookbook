@@ -3,6 +3,7 @@
    -------------
    Basic example of a context manager.
 """
+# pylint: disable-msg=R0801
 
 
 class LoggingContextManager:
@@ -27,6 +28,7 @@ __test__ = {
         LoggingContextManager.__exit__(None-None-None)
     '''
 }
+
 
 if __name__ == "__main__":
     import doctest

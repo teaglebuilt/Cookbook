@@ -1,14 +1,14 @@
 """ Dispatching on Type"""
 
 
-class Shape:  # pylint: disable=too-few-public-methods
+class Shape:
     """ parent type class """
 
     def __init__(self, solid):
         self.solid = solid
 
 
-class Circle(Shape):  # pylint: disable=too-few-public-methods
+class Circle(Shape):
     """ subclass of type shape """
 
     def __init__(self, center, radius, *args, **kwargs):
@@ -17,7 +17,7 @@ class Circle(Shape):  # pylint: disable=too-few-public-methods
         self.radius = radius
 
 
-class Parallelogram(Shape):   # pylint: disable=too-few-public-methods
+class Parallelogram(Shape):
     """ subclass of type shape """
 
     def __init__(self, pa, pb, pc, *args, **kwargs):

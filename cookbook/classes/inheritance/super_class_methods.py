@@ -3,7 +3,6 @@
     ----------------------------  
     Showing inheriting and overriding class methods and attributes from parent class.
 """
-
 from cookbook.classes.utils import iso6346
 
 

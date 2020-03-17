@@ -1,5 +1,4 @@
 """ Dispatching on Type"""
-from functools import singledispatch
 
 
 class Shape:
