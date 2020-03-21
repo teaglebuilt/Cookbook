@@ -2,7 +2,7 @@
 Simple example of a data class
 """
 # pylint: disable=unused-import
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 import typing
 
 @dataclass

@@ -10,6 +10,6 @@ Table of Contents
 =================
 
 * [Classes](https://github.com/teaglebuilt/cookbook/tree/master/cookbook/classes)
-    * [dataclasses](#idea)
+    * [dataclasses](https://github.com/teaglebuilt/cookbook/tree/master/cookbook/classes/data_classes)
     * [inheritance](https://github.com/teaglebuilt/cookbook/tree/master/cookbook/classes/inheritance)
-  * [Installation](#installation)
+
