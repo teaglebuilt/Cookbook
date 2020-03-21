@@ -52,6 +52,9 @@ unsafe-load-any-extension=no
 confidence=
 
 disable=print-statement,
+        too-many-ancestors,
+        missing-class-docstring,
+        invalid-name,
         duplicate-code,
         parameter-unpacking,
         unpacking-in-except,
