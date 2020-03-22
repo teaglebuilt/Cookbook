@@ -22,8 +22,9 @@ class CustomerOrder(object):
 __test__ = {
     'CustomerOrder': '''
         >>> from default_values import *
-        >>> CustomerOrder(10., "books")
+        >>> c = CustomerOrder(10., "books")
         >>> type(c.id) == uuid.UUID
+        True
     '''
 }
 
