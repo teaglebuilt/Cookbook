@@ -54,6 +54,8 @@ confidence=
 disable=print-statement,
         too-many-ancestors,
         missing-class-docstring,
+        missing-module-docstring,
+        missing-function-docstring,
         invalid-name,
         duplicate-code,
         parameter-unpacking,

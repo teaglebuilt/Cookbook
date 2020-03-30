@@ -4,11 +4,13 @@ from dataclasses import dataclass, field
 import typing
 import uuid
 
+
 @dataclass
 class Customer:
     id: int
     name: str
     address: str
+
 
 @dataclass(frozen=True, order=True)
 class CustomerOrder(object):
