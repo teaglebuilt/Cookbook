@@ -13,3 +13,5 @@ Table of Contents
     * [dataclasses](https://github.com/teaglebuilt/cookbook/tree/master/cookbook/classes/data_classes)
     * [inheritance](https://github.com/teaglebuilt/cookbook/tree/master/cookbook/classes/inheritance)
 
+* [Context Managers](https://github.com/teaglebuilt/cookbook/tree/master/cookbook/context_managers)
+    * [class example](https://github.com/teaglebuilt/cookbook/blob/master/cookbook/context_managers/logging_context.py)
